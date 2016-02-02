@@ -49,7 +49,7 @@ public class AccountManager {
                 if(in.equals("y")){
                     createAccount(Integer.parseInt(userInput("enter pin: ", "number"), 10), Double.parseDouble(userInput("enter balance: ", "number")), userInput("what type of account would you like to create?: ", ""));
                 }else{
-                    System.out.println("alright.");
+                    System.out.println("alright then.");
                 }
 
             }
@@ -93,11 +93,11 @@ public class AccountManager {
             System.out.println("erroir");
         }
     }
-    public Account deleteAccount(int pin){// make account null after calling. maybe?
+    public Account deleteAccount(int pin){// make account null after calling. maybe? I don't know.
         account = accounts.remove(pin);
         return account;
     }
-    public String userInput(String message, String type){//refactor and add filter
+    public String userInput(String message, String type){
         Scanner scanner = new Scanner(System.in);
         System.out.println(message);
         String input = scanner.nextLine();
@@ -113,7 +113,7 @@ public class AccountManager {
                     return input;
 
                 }else{
-                    System.out.println("entered value is invalid enter new Value: ");
+                    System.out.println("entered value is invalid. enter new Value: ");
                     input = scanner.next();
                     m = p.matcher(input);
                 }
