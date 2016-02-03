@@ -3,7 +3,7 @@ package io.zipcoder;
 /**
  * Created by roberthitchens3 on 2/2/16.
  */
-public class Account {
+public abstract class Account {
 
     private double balance;
     private int pin;
